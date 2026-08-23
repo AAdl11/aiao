@@ -1,0 +1,34 @@
+# AIAO
+
+> Vendor-neutral AI Agent Optimization for mission-driven, resource-constrained organizations.
+
+AIAO helps organizations present their value so AI agents can understand, find, and recommend them — without locking anyone into a single model or cloud vendor.
+
+Site: https://www.aiao.tech/
+Email: contact@aiao.tech
+LinkedIn: https://www.linkedin.com/in/mei-hsien-hsu/
+Location: San Francisco Bay Area and remote
+Languages: Traditional Chinese (zh-Hant), English, Spanish
+
+## Founder
+
+Mei-Hsien Hsu (許美嫻) founded AIAO. She spent 16 years in community programs and bilingual operations at Tzu Chi USA, and is formally trained in machine learning and statistics. Credentials include a Machine Learning & AI Certificate (2026) and AWS Cloud Foundations.
+
+## Services
+
+1. AI readability audit — have an AI agent actually read the client's site and report every place it cannot understand, see, or recommend them.
+2. Content restructuring — rewrite story, services, and expertise into the structure and language AI cites most easily (EN / 中文 / ES).
+3. Structured data — schema, llms.txt, semantic HTML, so agents identify the organization correctly.
+4. Ongoing optimization — models change; regular review keeps the organization visible.
+
+## Positioning
+
+- Vendor-neutral: deliverables (structure, copy, markup) belong to the client and travel across tools.
+- Built for nonprofits, faith and community groups, and small bilingual teams.
+- First consultation is free: an AI agent reads the site and reports whether it can currently see the organization.
+
+## Machine-readable files on this site
+
+- /llms.txt (this file)
+- JSON-LD ProfessionalService + Person on the homepage
+- /mei-hsien-hsu.vcf

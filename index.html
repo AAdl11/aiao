@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="title">AIAO ｜ AI 代理優化顧問 — 讓 AI 找得到、推薦得出你的品牌</title>
+    <meta name="description" content="AIAO 幫使命導向與資源有限的組織，把價值整理成 AI 代理讀得懂、樂於推薦的樣子——廠商中立、雙語服務、十六年社群與公益運作經驗。">
+    <meta property="og:title" content="AIAO ｜ AI Agent Optimization">
+    <meta property="og:description" content="Be the brand AI brings to the right people. Vendor-neutral AI optimization for mission-driven organizations.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.aiao.tech/">
+    <meta name="robots" content="index, follow">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "AIAO",
+      "alternateName": "AIAO Tech Consultancy",
+      "description": "AIAO (AI Agent Optimization) helps mission-driven and resource-constrained organizations present their value so that AI agents can understand, find, and recommend them.",
+      "url": "https://www.aiao.tech/",
+      "sameAs": [
+        "https://www.linkedin.com/in/mei-hsien-hsu/",
+        "https://github.com/AAdl11"
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Mei-Hsien Hsu",
+        "alternateName": "許美嫻",
+        "description": "Founder of AIAO. 16 years in community programs and bilingual operations at Tzu Chi USA; formally trained in machine learning and statistics."
+      },
+      "knowsLanguage": ["zh-Hant", "en", "es"],
+      "areaServed": "San Francisco Bay Area and remote",
+      "serviceType": [
+        "AI readability audit",
+        "Content optimization for AI agents",
+        "Structured data implementation",
+        "Vendor-neutral strategy consultation"
+      ],
+      "slogan": "Be the brand AI brings to the right people."
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600&family=Karla:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@500;600&display=swap" rel="stylesheet">
+    
+    <style>
+      :root{
+        --paper:#F7F2E9;
+        --paper-2:#EFE7D8;
+        --ink:#211C15;
+        --ink-soft:#4A4236;
+        --jade:#16685A;
+        --jade-deep:#0E4C42;
+        --clay:#C2632E;
+        --line:#E0D6C3;
+        --serif:'Fraunces','Noto Serif TC',Georgia,serif;
+        --sans:'Karla','Noto Sans TC',system-ui,sans-serif;
+      }
+      *{box-sizing:border-box;margin:0;padding:0}
+      html{scroll-behavior:smooth}
+      body{
+        font-family:var(--sans);
+        color:var(--ink);
+        background:var(--paper);
+        line-height:1.65;
+        -webkit-font-smoothing:antialiased;
+        background-image:
+          radial-gradient(900px 500px at 85% -5%, rgba(22,104,90,.10), transparent 60%),
+          radial-gradient(700px 500px at -5% 20%, rgba(194,99,46,.07), transparent 55%);
+        overflow-x:hidden;
+      }
+      .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+      .serif{font-family:var(--serif)}
+
+      /* ---- top bar ---- */
+      header{
+        position:sticky;top:0;z-index:50;
+        backdrop-filter:saturate(140%) blur(8px);
+        background:rgba(247,242,233,.82);
+        border-bottom:1px solid var(--line);
+      }
+      .bar{display:flex;align-items:center;justify-content:space-between;height:66px}
+      .logo{font-family:var(--serif);font-weight:600;font-size:1.45rem;letter-spacing:.04em;color:var(--ink);text-decoration:none}
+      .logo span{color:var(--jade)}
+      .langs{display:flex;gap:2px;background:var(--paper-2);border:1px solid var(--line);border-radius:999px;padding:4px}
+      .langs button{
+        font-family:var(--sans);font-size:.82rem;font-weight:700;letter-spacing:.03em;
+        border:0;background:transparent;color:var(--ink-soft);
+        padding:6px 13px;border-radius:999px;cursor:pointer;transition:.2s;
+      }
+      .langs button:hover{color:var(--ink)}
+      .langs button.on{background:var(--jade);color:#fff}
+
+      /* ---- hero ---- */
+      .hero{padding:84px 0 64px}
+      .eyebrow{
+        font-size:.8rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+        color:var(--jade);margin-bottom:24px;
+      }
+      h1{
+        font-family:var(--serif);font-weight:600;
+        font-size:clamp(2.5rem,6vw,4.3rem);line-height:1.06;letter-spacing:-.01em;
+        max-width:14ch;margin-bottom:26px;
+      }
+      .hero .sub{font-size:clamp(1.05rem,1.6vw,1.28rem);color:var(--ink-soft);max-width:52ch;margin-bottom:36px}
+      .cta{
+        display:inline-block;background:var(--clay);color:#fff;text-decoration:none;
+        font-weight:700;font-size:1.02rem;padding:15px 30px;border-radius:10px;
+        box-shadow:0 10px 24px -10px rgba(194,99,46,.6);transition:.2s;
+      }
+      .cta:hover{transform:translateY(-2px);box-shadow:0 16px 30px -12px rgba(194,99,46,.7)}
+      .trust{margin-top:26px;font-size:.92rem;color:var(--ink-soft);letter-spacing:.02em}
+
+      /* ---- generic section ---- */
+      section{padding:62px 0;border-top:1px solid var(--line)}
+      h2{
+        font-family:var(--serif);font-weight:600;
+        font-size:clamp(1.8rem,3.4vw,2.6rem);line-height:1.12;margin-bottom:22px;max-width:20ch;
+      }
+      .lead{font-size:1.12rem;color:var(--ink-soft);max-width:60ch;margin-bottom:16px}
+      .good{
+        display:inline-block;margin-top:14px;font-weight:700;color:var(--jade-deep);
+        border-left:3px solid var(--jade);padding-left:14px;font-size:1.05rem;
+      }
+
+      /* ---- services ---- */
+      .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:34px}
+      .card{
+        background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px;
+        transition:.25s;
+      }
+      .card:hover{transform:translateY(-4px);box-shadow:0 22px 40px -24px rgba(33,28,21,.3);border-color:var(--jade)}
+      .card .n{font-family:var(--serif);font-size:1rem;color:var(--clay);font-weight:600;margin-bottom:10px}
+      .card h3{font-family:var(--serif);font-weight:600;font-size:1.32rem;margin-bottom:10px}
+      .card p{color:var(--ink-soft);font-size:1rem}
+
+      /* ---- why ---- */
+      .why{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:34px}
+      .why .item h3{font-family:var(--serif);font-weight:600;font-size:1.25rem;margin-bottom:10px;color:var(--jade-deep)}
+      .why .item p{color:var(--ink-soft)}
+      .founder{margin-top:36px;font-family:var(--serif);font-style:italic;color:var(--ink-soft)}
+
+      /* ---- proof ---- */
+      .proof-note{
+        background:var(--paper-2);border:1px solid var(--line);border-radius:16px;
+        padding:30px;margin-top:8px;font-size:1.12rem;
+      }
+      .creds{margin-top:22px;font-size:.98rem;color:var(--ink-soft);border-left:3px solid var(--clay);padding-left:16px}
+
+      /* ---- final cta ---- */
+      .final{text-align:center;background:var(--jade-deep);color:var(--paper);border:0;border-radius:24px;margin:40px 0 70px;padding:64px 28px}
+      .final h2{color:#fff;margin:0 auto 18px}
+      .final p{color:rgba(247,242,233,.85);max-width:48ch;margin:0 auto 30px;font-size:1.1rem}
+      .final .cta{background:var(--clay)}
+
+      /* ---- quick action buttons (mingle mode) ---- */
+      .quick{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+      .qbtn{
+        display:inline-block;font-weight:700;font-size:.98rem;text-decoration:none;
+        color:var(--jade-deep);background:#fff;border:2px solid var(--jade);
+        padding:13px 22px;border-radius:10px;transition:.2s;
+      }
+      .qbtn:hover{background:var(--jade);color:#fff;transform:translateY(-2px)}
+
+      footer{border-top:1px solid var(--line);padding:30px 0 50px;color:var(--ink-soft);font-size:.9rem}
+      footer .bar{height:auto;flex-wrap:wrap;gap:8px}
+
+      /* ---- entrance ---- */
+      .rise{opacity:0;transform:translateY(18px);animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards}
+      .d1{animation-delay:.05s}.d2{animation-delay:.16s}.d3{animation-delay:.27s}.d4{animation-delay:.38s}
+      @keyframes rise{to{opacity:1;transform:none}}
+      @media (prefers-reduced-motion:reduce){.rise{animation:none;opacity:1;transform:none}}
+
+      @media(max-width:720px){
+        .cta{padding:16px 32px}
+        .qbtn{padding:14px 20px;flex:1;text-align:center}
+        .cards{grid-template-columns:1fr}
+        .why{grid-template-columns:1fr;gap:24px}
+        .hero{padding:56px 0 44px}
+        .logo{font-size:1.25rem}
+      }
+    </style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a href="#top" class="logo">AI<span>AO</span></a>
+    <nav class="langs" aria-label="Language">
+      <button data-lang="zh" class="on">中</button>
+      <button data-lang="en">EN</button>
+      <button data-lang="es">ES</button>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" style="border-top:0">
+    <div class="wrap">
+      <p class="eyebrow rise d1" data-i18n="eyebrow">AIAO ｜ AI 代理優化顧問</p>
+      <h1 class="rise d2" data-i18n="h1">讓 AI 把對的人，帶到你面前</h1>
+      <p class="sub rise d3" data-i18n="heroSub">AI 代理正在取代搜尋，替人們決定看見誰、推薦誰。AIAO 幫使命導向與資源有限的組織，把你的價值整理成 AI 讀得懂、樂於推薦的樣子——而且不把你綁進任何一家廠商。</p>
+      <a class="cta rise d4" href="#contact" data-i18n="heroCta">預約免費諮詢</a>
+      <p class="trust rise d4" data-i18n="trust">廠商中立 ・ 三語服務 ・ 十六年社群與公益運作經驗</p>
+      <div class="quick rise d4">
+        <a class="qbtn" href="mei-hsien-hsu.vcf" download data-i18n="qSave">📇 儲存聯絡人</a>
+        <a class="qbtn" href="https://www.linkedin.com/in/mei-hsien-hsu/" target="_blank" rel="noopener">in&nbsp;LinkedIn</a>
+        <a class="qbtn" href="mailto:contact@aiao.tech" data-i18n="qMail">✉️ 寫信給我</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2 data-i18n="shiftH">搜尋的規則，正在改寫</h2>
+      <p class="lead" data-i18n="shiftP1">過去人們用 Google 找答案，自己點進你的網站。現在愈來愈多人直接問 AI，由 AI 讀完全網、決定推薦誰。問題從「怎麼讓人點進我的網站」，變成「AI 讀得懂我、願意推薦我嗎」。</p>
+      <p class="lead" data-i18n="shiftP2">這對小型、使命導向的組織其實是好消息：你不必再砸大錢搶廣告版位。只要你的內容夠清楚、夠誠實、結構對了，AI 就會把你介紹給正在尋找你的人。</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2 data-i18n="svcH">AIAO 為你做什麼</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="n">01</div>
+          <h3 data-i18n="svc1H">AI 可讀性健檢</h3>
+          <p data-i18n="svc1P">用 AI 代理實際讀過你的網站，找出它讀不懂、看不到、無法推薦你的每一個地方。</p>
+        </div>
+        <div class="card">
+          <div class="n">02</div>
+          <h3 data-i18n="svc2H">內容重整</h3>
+          <p data-i18n="svc2P">把你的品牌故事、服務與專業，改寫成 AI 最容易理解與引用的結構和語言（中／英／西）。</p>
+        </div>
+        <div class="card">
+          <div class="n">03</div>
+          <h3 data-i18n="svc3H">結構化資料</h3>
+          <p data-i18n="svc3P">加上 AI 代理依賴的機器可讀標記（schema、meta、語意結構），讓你被正確辨識與推薦。</p>
+        </div>
+        <div class="card">
+          <div class="n">04</div>
+          <h3 data-i18n="svc4H">持續優化</h3>
+          <p data-i18n="svc4P">AI 模型一直在變。定期檢視、調整，讓你持續被看見。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2 data-i18n="whyH">為什麼是 AIAO</h2>
+      <div class="why">
+        <div class="item">
+          <h3 data-i18n="why1H">廠商中立</h3>
+          <p data-i18n="why1P">大廠的駐點工程師是來把你綁進他們的產品；我不是。我幫你把 AI 用起來，同時替你保留隨時換工具的彈性——在沒人能預測一年後誰最好的此刻，這份彈性很值錢。</p>
+        </div>
+        <div class="item">
+          <h3 data-i18n="why2H">我懂使命型組織</h3>
+          <p data-i18n="why2P">我帶著十六年社群與公益運作的經驗，加上機器學習的專業訓練。我聽得懂你的使命，也做得出對的技術。</p>
+        </div>
+        <div class="item">
+          <h3 data-i18n="why3H">雙語、跨文化</h3>
+          <p data-i18n="why3P">中、英、西三語服務，因為支持你的人來自不同背景。</p>
+        </div>
+      </div>
+      <p class="founder" data-i18n="founder">創辦人 ・ 許美嫻 Mei-Hsien Hsu</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2 data-i18n="proofH">看得到的成果</h2>
+      <div class="proof-note">
+        <p data-i18n="proofP">我自己的這個網站，就是用我賣的那套做的——AI 讀得懂、找得到、推薦得出。這是你能拿到的第一個範例：我先在自己身上做到了。</p>
+        <p class="creds" data-i18n="creds">證照與專業：機器學習與 AI 證書（2026）・ 統計背景 ・ AWS 雲端基礎 ・ 十六年非營利社群運作</p>
+        <div class="quick">
+          <a class="qbtn" href="https://aadl11.github.io/kindness-seeds-/" target="_blank" rel="noopener" data-i18n="proofPlay">🌱 玩「善的種子」三語遊戲</a>
+          <a class="qbtn" href="https://github.com/AAdl11/journey-of-kindness" target="_blank" rel="noopener" data-i18n="proofSrc">GitHub 原始碼</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final" id="contact">
+    <div class="wrap">
+      <h2 data-i18n="finalH">別讓對的人，錯過你</h2>
+      <p data-i18n="finalP">第一步是免費的。我會用 AI 代理實際讀一次你的網站，告訴你它現在看不看得到你。</p>
+      <a class="cta" href="mailto:contact@aiao.tech?subject=AIAO%20免費諮詢" data-i18n="finalCta">預約免費諮詢</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap bar">
+    <span class="logo" style="font-size:1.1rem">AI<span>AO</span></span>
+    <span data-i18n="foot">AI 代理優化顧問 ・ SF Bay Area ・ © 2026 AIAO</span>
+  </div>
+</footer>
+
+<script>
+const I18N = {
+  zh:{
+    eyebrow:"AIAO ｜ AI 代理優化顧問",
+    h1:"讓 AI 把對的人，帶到你面前",
+    heroSub:"AI 代理正在取代搜尋，替人們決定看見誰、推薦誰。AIAO 幫使命導向與資源有限的組織，把你的價值整理成 AI 讀得懂、樂於推薦的樣子——而且不把你綁進任何一家廠商。",
+    heroCta:"預約免費諮詢",
+    trust:"廠商中立 ・ 三語服務 ・ 十六年社群與公益運作經驗",
+    qSave:"📇 儲存聯絡人", qMail:"✉️ 寫信給我",
+    proofPlay:"🌱 玩「善的種子」三語遊戲", proofSrc:"GitHub 原始碼",
+    shiftH:"搜尋的規則，正在改寫",
+    shiftP1:"過去人們用 Google 找答案，自己點進你的網站。現在愈來愈多人直接問 AI，由 AI 讀完全網、決定推薦誰。問題從「怎麼讓人點進我的網站」，變成「AI 讀得懂我、願意推薦我嗎」。",
+    shiftP2:"這對小型、使命導向的組織其實是好消息：你不必再砸大錢搶廣告版位。只要你的內容夠清楚、夠誠實、結構對了，AI 就會把你介紹給正在尋找你的人。",
+    svcH:"AIAO 為你做什麼",
+    svc1H:"AI 可讀性健檢", svc1P:"用 AI 代理實際讀過你的網站，找出它讀不懂、看不到、無法推薦你的每一個地方。",
+    svc2H:"內容重整", svc2P:"把你的品牌故事、服務與專業，改寫成 AI 最容易理解與引用的結構和語言（中／英／西）。",
+    svc3H:"結構化資料", svc3P:"加上 AI 代理依賴的機器可讀標記（schema、meta、語意結構），讓你被正確辨識與推薦。",
+    svc4H:"持續優化", svc4P:"AI 模型一直在變。定期檢視、調整，讓你持續被看見。",
+    whyH:"為什麼是 AIAO",
+    why1H:"廠商中立", why1P:"大廠的駐點工程師是來把你綁進他們的產品；我不是。我幫你把 AI 用起來，同時替你保留隨時換工具的彈性——在沒人能預測一年後誰最好的此刻，這份彈性很值錢。",
+    why2H:"我懂使命型組織", why2P:"我帶著十六年社群與公益運作的經驗，加上機器學習的專業訓練。我聽得懂你的使命，也做得出對的技術。",
+    why3H:"雙語、跨文化", why3P:"中、英、西三語服務，因為支持你的人來自不同背景。",
+    founder:"創辦人 ・ 許美嫻 Mei-Hsien Hsu",
+    proofH:"看得到的成果",
+    proofP:"我自己的這個網站，就是用我賣的那套做的——AI 讀得懂、找得到、推薦得出。這是你能拿到的第一個範例：我先在自己身上做到了。",
+    creds:"證照與專業：機器學習與 AI 證書（2026）・ 統計背景 ・ AWS 雲端基礎 ・ 十六年非營利社群運作",
+    finalH:"別讓對的人，錯過你",
+    finalP:"第一步是免費的。我會用 AI 代理實際讀一次你的網站，告訴你它現在看不看得到你。",
+    finalCta:"預約免費諮詢",
+    foot:"AI 代理優化顧問 ・ SF Bay Area ・ © 2026 AIAO",
+    title:"AIAO ｜ AI 代理優化顧問 — 讓 AI 找得到、推薦得出你的品牌"
+  },
+  en:{
+    eyebrow:"AIAO ｜ AI Agent Optimization",
+    h1:"Be the brand AI brings to the right people",
+    heroSub:"AI agents are replacing search, deciding who gets seen and recommended. AIAO helps mission-driven and resource-constrained organizations present their value so AI understands and is glad to recommend you — without locking you into any single vendor.",
+    heroCta:"Book a free consultation",
+    trust:"Vendor-neutral ・ Trilingual service ・ 16 years of community & nonprofit operations",
+    qSave:"📇 Save contact", qMail:"✉️ Email me",
+    proofPlay:"🌱 Play Kindness Seeds (trilingual game)", proofSrc:"View source on GitHub",
+    shiftH:"The rules of being found are changing",
+    shiftP1:"People used to search Google and click through to your site. Increasingly, they just ask an AI, which reads the whole web and decides who to recommend. The question has shifted from 'how do I get people to click my site?' to 'can AI understand me, and will it recommend me?'",
+    shiftP2:"For small, mission-driven organizations this is good news: you no longer need a big budget to buy your way to the top. If your content is clear, honest, and well-structured, AI will introduce you to the people already looking for you.",
+    svcH:"What AIAO does for you",
+    svc1H:"AI Readability Audit", svc1P:"I have an AI agent actually read your site and find every place it can't understand, see, or recommend you.",
+    svc2H:"Content Restructuring", svc2P:"I rewrite your story, services, and expertise into the structure and language AI understands and cites most easily (EN / 中文 / ES).",
+    svc3H:"Structured Data", svc3P:"I add the machine-readable markup AI agents rely on (schema, meta, semantic structure) so you're identified and recommended correctly.",
+    svc4H:"Ongoing Optimization", svc4P:"AI models keep changing. Regular review and adjustment keep you visible.",
+    whyH:"Why AIAO",
+    why1H:"Vendor-neutral", why1P:"A big lab's forward-deployed engineer exists to bind you to their product. I don't. I help you put AI to work while keeping your freedom to switch tools — valuable when no one can predict who'll be best a year from now.",
+    why2H:"I understand mission-driven work", why2P:"16 years of community and nonprofit operations plus formal machine-learning training. I understand your mission, and I can build the technology.",
+    why3H:"Multilingual, cross-cultural", why3P:"Service in English, Chinese, and Spanish — because the people who support you come from different backgrounds.",
+    founder:"Founder ・ Mei-Hsien Hsu 許美嫻",
+    proofH:"Proof you can see",
+    proofP:"This very site is built with exactly what I sell — readable, findable, and recommendable by AI. It's the first case study you get: I did it on myself first.",
+    creds:"Credentials: Machine Learning & AI Certificate (2026) ・ Statistics background ・ AWS Cloud Foundations ・ 16 years of nonprofit community operations",
+    finalH:"Don't let the right people miss you",
+    finalP:"The first step is free. I'll have an AI agent read your site and tell you whether it can see you right now.",
+    finalCta:"Book a free consultation",
+    foot:"AI Agent Optimization ・ SF Bay Area ・ © 2026 AIAO",
+    title:"AIAO ｜ AI Agent Optimization — be the brand AI finds and recommends"
+  },
+  es:{
+    eyebrow:"AIAO ｜ Optimización para Agentes de IA",
+    h1:"Sé la marca que la IA lleva a las personas correctas",
+    heroSub:"Los agentes de IA están reemplazando a las búsquedas y deciden a quién se ve y se recomienda. AIAO ayuda a organizaciones con una misión y recursos limitados a presentar su valor para que la IA lo entienda y lo recomiende con gusto — sin atarte a ningún proveedor.",
+    heroCta:"Reserva una consulta gratuita",
+    trust:"Neutral en proveedores ・ Servicio trilingüe ・ 16 años de operación comunitaria y sin fines de lucro",
+    qSave:"📇 Guardar contacto", qMail:"✉️ Escríbeme",
+    proofPlay:"🌱 Juega Kindness Seeds (trilingüe)", proofSrc:"Código en GitHub",
+    shiftH:"Las reglas para ser encontrado están cambiando",
+    shiftP1:"Antes la gente buscaba en Google y entraba a tu sitio. Cada vez más, simplemente le preguntan a una IA, que lee toda la web y decide a quién recomendar. La pregunta cambió de 'cómo logro que entren a mi sitio?' a '¿me entiende la IA y me va a recomendar?'",
+    shiftP2:"Para las organizaciones pequeñas y con una misión, esto es una buena noticia: ya no necesitas un gran presupuesto para llegar arriba. Si tu contenido es claro, honesto y bien estructurado, la IA te presentará a quienes ya te están buscando.",
+    svcH:"Qué hace AIAO por ti",
+    svc1H:"Auditoría de legibilidad para IA", svc1P:"Hago que un agente de IA lea tu sitio y encuentre cada punto donde no puede entenderte, verte o recomendarte.",
+    svc2H:"Reestructuración de contenido", svc2P:"Reescribo tu historia, servicios y experiencia en la estructura y el lenguaje que la IA entiende y cita con más facilidad (ES / 中文 / EN).",
+    svc3H:"Datos estructurados", svc3P:"Añado el marcado legible por máquinas en que se apoyan los agentes de IA (schema, meta, estructura semántica) para que te identifiquen y recomienden correctamente.",
+    svc4H:"Optimización continua", svc4P:"Los modelos de IA cambian constantemente. La revisión y el ajuste periódicos te mantienen visible.",
+    whyH:"Por qué AIAO",
+    why1H:"Neutral en proveedores", why1P:"El ingeniero integrado de un gran laboratorio existe para atarte a su producto. Yo no. Te ayudo a usar la IA conservando tu libertad de cambiar de herramienta — algo valioso cuando nadie puede predecir quién será el mejor dentro de un año.",
+    why2H:"Entiendo el trabajo con propósito", why2P:"16 años de operación comunitaria y sin fines de lucro, más formación en aprendizaje automático. Entiendo tu misión y sé construir la tecnología.",
+    why3H:"Multilingüe y transcultural", why3P:"Servicio en español, chino e inglés — porque quienes te apoyan vienen de orígenes distintos.",
+    founder:"Fundadora ・ Mei-Hsien Hsu 許美嫻",
+    proofH:"Resultados que puedes ver",
+    proofP:"Este mismo sitio está hecho con exactamente lo que vendo — legible, localizable y recomendable por la IA. Es el primer caso de estudio que recibes: lo hice primero conmigo misma.",
+    creds:"Credenciales: Certificado en Aprendizaje Automático e IA (2026) ・ Formación en estadística ・ AWS Cloud Foundations ・ 16 años de operación comunitaria sin fines de lucro",
+    finalH:"No dejes que las personas correctas te pierdan",
+    finalP:"El primer paso es gratis. Haré que un agente de IA lea tu sitio y te diga si puede verte ahora mismo.",
+    finalCta:"Reserva una consulta gratuita",
+    foot:"Optimización para Agentes de IA ・ SF Bay Area ・ © 2026 AIAO",
+    title:"AIAO ｜ Optimización para Agentes de IA — sé la marca que la IA encuentra y recomienda"
+  }
+};
+
+const LANG_ATTR = {zh:"zh-Hant", en:"en", es:"es"};
+
+function setLang(lang){
+  const dict = I18N[lang];
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    const key = el.getAttribute("data-i18n");
+    if(dict[key] !== undefined) el.textContent = dict[key];
+  });
+  document.documentElement.lang = LANG_ATTR[lang];
+  document.title = dict.title;
+  document.querySelectorAll(".langs button").forEach(b=>{
+    b.classList.toggle("on", b.getAttribute("data-lang") === lang);
+  });
+}
+
+document.querySelectorAll(".langs button").forEach(b=>{
+  b.addEventListener("click", ()=> setLang(b.getAttribute("data-lang")));
+});
+
+// Pick initial language from the visitor's browser; default to Chinese.
+(function(){
+  const nav = (navigator.language || "zh").toLowerCase();
+  let initial = "zh";
+  if(nav.startsWith("en")) initial = "en";
+  else if(nav.startsWith("es")) initial = "es";
+  if(initial !== "zh") setLang(initial);
+})();
+</script>
+</body>
+</html>

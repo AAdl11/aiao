@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+N;CHARSET=UTF-8:Hsu;Mei-Hsien;;;
+FN;CHARSET=UTF-8:Mei-Hsien Hsu 許美嫻
+ORG;CHARSET=UTF-8:AIAO
+TITLE;CHARSET=UTF-8:Founder · AI Agent Optimization
+EMAIL;TYPE=WORK:contact@aiao.tech
+URL:https://www.aiao.tech/
+URL:https://www.linkedin.com/in/mei-hsien-hsu/
+ADR;TYPE=WORK:;;San Francisco Bay Area;;;;
+NOTE;CHARSET=UTF-8:Vendor-neutral AI Agent Optimization for mission-driven organizations. Languages: 中文 / English / Español.
+END:VCARD

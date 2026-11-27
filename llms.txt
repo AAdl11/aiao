@@ -5,7 +5,7 @@
 AIAO helps organizations present their value so AI agents can understand, find, and recommend them — without locking anyone into a single model or cloud vendor.
 
 Site: https://www.aiao.tech/
-Email: contact@aiao.tech
+Email: hsu.meihsien@gmail.com
 LinkedIn: https://www.linkedin.com/in/mei-hsien-hsu/
 Location: San Francisco Bay Area and remote
 Languages: Traditional Chinese (zh-Hant), English, Spanish
